@@ -1,10 +1,12 @@
+import styles from "./NavBar.module.css";
+
 function NavBar() {
   return (
-    <div>
-      <button>Mens</button>
-      <button>Womens</button>
-      <button>Electronics</button>
-      <button>Jewelry</button>
+    <div className={styles.productCategories}>
+      <span>Mens</span>
+      <span>Womens</span>
+      <span>Electronics</span>
+      <span>Jewelry</span>
     </div>
   );
 }
