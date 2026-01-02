@@ -35,6 +35,7 @@ function NavBar() {
     <div className={styles.productCategories}>
       <span onClick={() => handleClick("mens")}>Mens</span>
       <span onClick={() => handleClick("womens")}>Womens</span>
+      <span onClick={() => handleClick("makeup")}>Makeup</span>
       <span onClick={() => handleClick("electronics")}>Electronics</span>
       <span onClick={() => handleClick("furniture")}>Furniture</span>
       <span onClick={() => handleClick("kitchen")}>kitchen</span>

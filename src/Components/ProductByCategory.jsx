@@ -8,6 +8,7 @@ function Mens({ item }) {
         <img src={images}></img>
         <h3>{item.title}</h3>
         <h4>{item.description}</h4>
+        <h5>{`$ ${item.price}`}</h5>
       </div>
     </div>
   );
