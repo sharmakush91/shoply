@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import styles from "./ProductList.module.css";
-import Mens from "./Mens";
+import ProductByCategory from "./ProductByCategory";
+import mensBanner from "../assets/Images/Mens.png";
 
 function ProductList() {
   const items = useSelector((state) => state.product.items);
@@ -10,15 +11,21 @@ function ProductList() {
     return <span className={styles.loader}></span>;
   }
 
-  return (
-    <div className={styles.categoryWrapper}>
-      {items
-        .filter((item) => item.category === "men's clothing")
-        .map((item) => (
-          <Mens key={item.id} item={item} />
+  if (status === "succeeded") {
+    return (
+      <div className={styles.categoryWrapper}>
+        <div className={styles.bannerWrapper}>
+          <img
+            src={mensBanner}
+            alt="Mens Banner"
+            className={styles.bannerImg}
+          />
+        </div>
+        {items.map((item) => (
+          <ProductByCategory key={item.id} item={item} />
         ))}
-    </div>
-  );
+      </div>
+    );
+  }
 }
-
 export default ProductList;
