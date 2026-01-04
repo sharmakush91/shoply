@@ -39,3 +39,13 @@
 .mensContainer h5 {
   font-size: 16px;
 }
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.cardLink h3 {
+  text-decoration: none;
+  margin-bottom: 8px;
+}

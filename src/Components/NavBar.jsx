@@ -2,9 +2,11 @@ import { useDispatch } from "react-redux";
 import styles from "./NavBar.module.css";
 import { fetchProducts } from "../Slices/ProductDataslice";
 import { clearItems } from "../Slices/ProductDataslice";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function handleClick(type) {
     dispatch(clearItems());
@@ -29,6 +31,8 @@ function NavBar() {
     selectCateogries.map((cat) => {
       dispatch(fetchProducts({ categories: cat }));
     });
+
+    navigate(`/${type}`);
   }
 
   return (
