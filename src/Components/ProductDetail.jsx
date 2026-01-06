@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./ProductDetail.module.css";
 
 function ProductDetail() {
@@ -41,13 +41,11 @@ function ProductDetail() {
         <button className={styles.addToCart}>Add to cart</button>
       </div>
       <div className={styles.productDetails}>
-        {/* Column 1: Info */}
         <div className={styles.infoColumn}>
           <h2>Product Info</h2>
           <p>{product.description}</p>
         </div>
 
-        {/* Column 2: Reviews */}
         <div className={styles.reviewsColumn}>
           <h2>Reviews</h2>
           {product.reviews.map((rev, index) => (
